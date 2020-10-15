@@ -1,0 +1,36 @@
+# site settings
+title: AJ Blogs
+subtitle: Blog page theme
+email: youremailaddress@gmail.com
+description: A simple and elegant jekyll theme for blogs.
+baseurl: "/aj-jekyll-blog-theme"
+url: "https://arihant-001.github.io"
+author: Arihant Jain
+
+# social settings
+facebook_url: https://facebook.com/
+dribble_url: https://dribbble.com/
+tumblr_url: https://tumblr.com/
+instagram_url: https://instagram.com/
+twitter_url: https://twitter.com/
+github_url: https://github.com/
+stackoverflow_url: https://stackoverflow.com/
+linkedin_url: https://linkedin.com/
+
+formspree_url: https://formspree.io/xqkyrway
+
+collections:
+  projects:
+    output: true
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+
+plugins:
+  [jekyll-paginate]
+
+paginate: 5
+paginate_path: "/blog/page:num/"
