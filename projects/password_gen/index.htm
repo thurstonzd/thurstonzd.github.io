@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Password Generator</title>
+        <link rel="Stylesheet" href="passwords.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet" />
+        <script src="passwords.js"></script>
+    </head>
+
+    <body>
+        <form id="password_gen">
+            <!-- list of available characters (to be populated by JavaScript) -->
+            <datalist id="available_chars_list"></datalist>
+
+            <!-- list of available password requirements (to be populated by JavaScript) -->
+            <datalist id="password_reqs_list"></datalist>
+
+            <!-- UI component for selecting available characters -->
+            <label>
+                Available Characters:
+                <input type="text" list="available_chars_list" id="available_chars" required />
+            </label>
+
+            <!-- UI component for selecting password requirement -->
+            <label>
+                Password Requirement:
+                <input type="text" list="password_reqs_list" id="password_reqs" required />
+            </label>
+
+            <label>
+                Password length:
+                <input type="number" id="password_length" required />
+            </label>
+
+            <input type="submit" value="Generate Password" />
+            <input type="reset" value="Reset" />
+
+            <h2>Password</h2>
+            <div id="password"></div>
+
+        </form>
+
+        <script src="password_init.js"></script>
+    </body>
+</html>
