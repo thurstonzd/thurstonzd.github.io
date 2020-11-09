@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Track Formatting</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <textarea rows="20" cols="80" id="raw"></textarea>
+        <input type="button" id="btnFormat" value="Format" />
+        <textarea rows="20" cols="80" id="formatted"></textarea>
+
+        <script>
+            let btn = document.getElementById("btnFormat");
+
+            const REPLACEMENTS = [
+                [/\n\s+/gm, `\n`],
+                [/(\d)\.\n(.*) \d{2}:\d{2}/gm, `$1. $2`],
+                [/^(\d)\./gm, `0$1.`]
+            ]
+        
+            let format_tracks = function(s) {
+                
+            }
+            
+            btn.addEventListener("click", function() {
+                let txtRawInput = document.getElementById("raw");
+                let txtFormatted = document.getElementById("formatted");
+                let s = txtRawInput.value;
+
+                for (let pair of REPLACEMENTS) {
+                    regex = pair[0];
+                    replacement = pair[1];
+                    s = s.replace(regex, replacement);
+                }
+                
+                txtFormatted.value = s;
+            })
+        </script>
+    </body>    
+</html>
