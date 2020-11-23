@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>T9</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <label for="in">Input</label>
+        <input type="text" id="in" />
+
+        <button type="button">Convert</button>
+
+        <span id="out"></span>
+    </body>    
+
+    <script>
+        const REPLACEMENTS = [
+            [/[A-C]/gi, '2'],
+            [/[D-F]/gi, '3'],
+            [/[G-I]/gi, '4'],
+            [/[J-L]/gi, '5'],
+            [/[M-O]/gi, '6'],
+            [/[P-S]/gi, '7'],
+            [/[T-V]/gi, '8'],
+            [/[W-Z]/gi, '9'],
+            [/(\d{3})(\d{4})/gi, '$1-$2']
+        ];
+
+        let T9 = function(s) {
+            for (let elem of REPLACEMENTS) {
+                s = s.replace(elem[0], elem[1]);
+            }
+            return s;
+        }
+        
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", event => {
+                input = document.getElementById("in");
+                output = document.getElementById("out");
+                output.innerHTML = T9(input.value);
+        })
+    </script>
+</html>
