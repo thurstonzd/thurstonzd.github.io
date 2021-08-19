@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Storm Distance Calculator</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+
+        <fieldset>
+            <legend>Distance Unit</legend>
+
+            <input type="radio" id="mi" name="unit" value="mi" checked />
+            <label for="mi">Miles</label>
+
+            <input type="radio" id="km" name="unit" value="mi" />
+            <label for="km">Kilometers</label>
+        </fieldset>
+
+        <input type="button" id="record" value="Record">
+
+        <table id="data">
+            <thead>
+                <tr><th>Lightning</th><th>Thunder</th><th>Distance</th></tr>
+            </thead>
+        </table>
+
+        <script>
+            let data = [];
+
+            const MILES_PER_SECOND = 0.2;
+            const KM_PER_SECOND = 1;
+            const MILLISECONDS_IN_SECOND = 1000;
+
+            const btn = document.querySelector("#record");
+            const use_miles_option = document.querySelector("#mi");
+
+            btn.addEventListener("click", function() {
+                data.push(new Date());
+
+                if (data.length % 2 === 0) {
+                    // calculate distance
+                    let new_data = data.slice(-2);
+                    let diff = (new_data[1] - new_data[0]) / MILLISECONDS_IN_SECOND;
+                    let distance = diff * (use_miles_option.checked ? MILES_PER_SECOND : KM_PER_SECOND);
+
+                    // add to table
+                }
+
+            });
+        </script>
+    </body>    
+</html>
