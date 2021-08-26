@@ -4,6 +4,18 @@
     <head>
         <title>Storm Distance Calculator</title>
         <meta charset="utf-8">
+        <style>
+            table {
+                table-layout: fixed;
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+
+            th, td {
+                border: 1px solid black;
+            }
+        </style>
     </head>
     
     <body>
@@ -28,24 +40,82 @@
 
         <script>
             let data = [];
-
+            
+            const CAPTIONS = ["Record lightning", "Record thunder"];
             const MILES_PER_SECOND = 0.2;
             const KM_PER_SECOND = 1;
             const MILLISECONDS_IN_SECOND = 1000;
 
             const btn = document.querySelector("#record");
             const use_miles_option = document.querySelector("#mi");
+            const tbl = document.querySelector("table");
+
+            /*
+            define time format above, since it will never change.
+            number format defined in loop, since it uses the unit,
+            which can chance between calculations.
+            */
+            const time_format = new Intl.DateTimeFormat('en-US', {'timeStyle': 'medium'});
+            let number_format = null;
+
+            // function to update the button caption, run whenever it's clicked.
+            let updateCaptions = function() {
+                btn.value = captions[data.length % 2];
+            }
+
+            // initial call when document loads
+            updateCaptions();
 
             btn.addEventListener("click", function() {
                 data.push(new Date());
+                updateCaptions();
 
                 if (data.length % 2 === 0) {
-                    // calculate distance
+                    btn.textContent = "Record lightning";
                     let new_data = data.slice(-2);
+
+                    // calculate distance
                     let diff = (new_data[1] - new_data[0]) / MILLISECONDS_IN_SECOND;
-                    let distance = diff * (use_miles_option.checked ? MILES_PER_SECOND : KM_PER_SECOND);
+
+                    let distance = null;
+                    if (use_miles_option.checked) {
+                        distance = diff * MILES_PER_SECOND;
+                        number_format = new Intl.NumberFormat("en-US", {
+                            "style": "unit",
+                            "unit": "mile",
+                            // "unitDisplay": "long",
+                            "minimumFractionDigits": 1,
+                            "maximumFractionDigits": 2
+                        });
+                    }
+                    else {
+                        distance = diff * KM_PER_SECOND;
+                        number_format = new Intl.NumberFormat("en-US", {
+                            "style": "unit",
+                            "unit": "kilometer",
+                            // "unitDisplay": "long",
+                            "minimumFractionDigits": 1,
+                            "maximumFractionDigits": 2
+                        });
+                    }
+
+                    // format dates and number
+                    new_data.forEach(function(item, idx, new_data) {
+                        new_data[idx] = time_format.format(item);
+                    });
+
+                    new_data.push(number_format.format(distance));
 
                     // add to table
+                    let tr = document.createElement("tr");
+
+                    for (el of new_data) {
+                        let td = document.createElement("td");
+                        td.appendChild(document.createTextNode(el));
+                        tr.appendChild(td);
+                    }
+
+                    tbl.appendChild(tr);
                 }
 
             });
