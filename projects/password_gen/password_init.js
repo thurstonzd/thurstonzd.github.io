@@ -1,5 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////////////
 // constants
+const DEFAULT_PASSWORD_LENGTH = 10;
+
 const ASCII_UPPER_CASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 // special characters that can be entered on standard US keyboard.
@@ -17,28 +19,6 @@ const CHARACTER_CLASSES =
     [DIGITS_KEY]: "0123456789",
     [SPECIAL_CHARACTERS_KEY]: "!#$@"
 }
-
-var PASSWORD_RULES = [
-    {
-        "caption": "Letters and Numbers Only",
-        "rule":
-            "(?=.*[A-Z]+.*)" +      // upper-case in string
-            "(?=.*[a-z]+.*)" +      // lower-case in string
-            "(?=.*[0-9].*)" +       // digit in string
-            "^[A-Za-z]" +           // pw starts with letter
-            ".*$"                   // pw ends with 7+ chars
-    },
-    {
-        "caption": "Complex Password",
-        "rule":
-            "(?=.*[A-Z]+.*)" +      // upper-case in string
-            "(?=.*[a-z]+.*)" +      // lower-case in string
-            "(?=.*[0-9]+.*)" +      // digit in string
-            "(?=.*[!#$@)]+.*)" +    // special character in string
-            "^[A-Za-z]" +           // pw starts with letter
-            ".*$"                   // password ends 
-    }
-];
 
 let ALLOWED = "allowed";
 let REQUIRED = "required";
@@ -65,6 +45,10 @@ window.addEventListener("load", function (evt) {
     // populate default special characters
     let special_characters = document.getElementById("special_characters");
     special_characters.value = CHARACTER_CLASSES[SPECIAL_CHARACTERS_KEY];
+
+    // default password length
+    let password_length = document.getElementById("password_length");
+    password_length.value = DEFAULT_PASSWORD_LENGTH;
 });
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -72,19 +56,10 @@ window.addEventListener("load", function (evt) {
 var el = document.getElementById("password_gen");
 el.addEventListener("submit", function (evt) {
     evt.preventDefault();
-    // var allowed = document.getElementById("available_chars").value;
-    // var pattern = document.getElementById("password_reqs").value;
-    // var passwordLength = document.getElementById("password_length").value;
-
-    // var password = get_random_matching_string(pattern, allowed, passwordLength);
-
-    // var password_div = document.getElementById("password");
-    // password_div.innerHTML = password;
 
     let allowed_characters = "";
     let patterns = [];
     let lookahead = "";
-    let cls = "";
 
     let selects = document.querySelectorAll("select");
     selects.forEach((select) => {
@@ -149,5 +124,13 @@ el.addEventListener("submit", function (evt) {
 el.addEventListener("reset", function (evt) {
     // don't prevent default behavior; just also clear password div
     document.getElementById("password").innerHTML = "";
+
+    let selects = document.querySelectorAll("select");
+    for (let i = 0; i < selects.length; i++) {
+        selects[i].value = ALLOWED;
+    }
+
+    let password_length = document.getElementById("password_length");
+    password_length.value = DEFAULT_PASSWORD_LENGTH;
 });
 ///////////////////////////////////////////////////////////////////////////////////
