@@ -6,12 +6,18 @@ var ASCII_LOWER_CASE = ASCII_UPPER_CASE.toLocaleLowerCase();
 var ASCII_LETTERS = ASCII_LOWER_CASE + ASCII_UPPER_CASE;
 
 var ALLOWED_CHARACTER_SETS = [
-    { "caption": "Standard Allowed Characters"
-        , "characters": DIGITS + ASCII_LETTERS + "!#$@"
-    }
-    , { "caption": 'US Keyboard Characters'
-        , "characters": DIGITS + ASCII_LETTERS
-                        + "\`~!@#$%^&*()-_=+[]\\{}|;':\",./<>?"
+    { 
+        "caption": "Standard Allowed Characters",
+        "characters": DIGITS + ASCII_LETTERS + "!#$@"
+    },
+    { 
+        "caption": 'US Keyboard Characters',
+        "characters": DIGITS + ASCII_LETTERS +
+                "\`~!@#$%^&*()-_=+[]\\{}|;':\",./<>?"
+    },
+    {
+        "caption": "Letters and Numbers Only",
+        "characters": DIGITS + ASCII_LETTERS
     }
 ];
 
@@ -23,9 +29,7 @@ var PASSWORD_RULES = [
             "(?=.*[a-z]+.*)" +      // lower-case in string
             "(?=.*[0-9].*)" +       // digit in string
             "^[A-Za-z]" +           // pw starts with letter
-            ".{7,}$"                // pw ends with 7+ chars 
-                                    // (additional character requirements
-                                    // satisfied in lookahead assertions)
+            ".*$"                   // pw ends with 7+ chars
     },
     {
         "caption": "Complex Password",
@@ -35,7 +39,7 @@ var PASSWORD_RULES = [
             "(?=.*[0-9]+.*)" +      // digit in string
             "(?=.*[!#$@)]+.*)" +    // special character in string
             "^[A-Za-z]" +           // pw starts with letter
-            ".{7,}$"                // password ends with 7+ chars
+            ".*$"                   // password ends 
     }
 ];
 
