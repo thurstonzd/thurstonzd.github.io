@@ -43,49 +43,26 @@ var PASSWORD_RULES = [
     }
 ];
 
+let ALLOWED = "allowed";
+let REQUIRED = "required";
+let PROHIBITED = "prohibited";
+
+let SELECT_OPTIONS = [ALLOWED, REQUIRED, PROHIBITED];
+
 ///////////////////////////////////////////////////////////////////////////////////
 // event listener for loading available characters and password rules
 window.addEventListener("load", function (evt) {
-    var allowedDataList = document.getElementById("available_chars_list");
-    var allowedCharacterEntries = ALLOWED_CHARACTER_SETS;
-    var allowedCharactersTextBox = document.getElementById("available_chars");
-    var maxLength = 0;
-
-    for (var i = 0; i < allowedCharacterEntries.length; i++) {
-        var entry = allowedCharacterEntries[i];
-
-        var chars = entry["characters"];
-        if (chars.length > maxLength) { maxLength = chars.length; }
-
-        var caption = entry["caption"];
-
-        var textNode = document.createTextNode(caption);
-        var option = document.createElement("option");
-        option.setAttribute("value", chars);
-        option.appendChild(textNode);
-        allowedDataList.appendChild(option);
-    }
-    allowedCharactersTextBox.size = maxLength;
-
-    var rulesDataList = document.getElementById("password_reqs_list");
-    var rulesEntries = PASSWORD_RULES;
-    var rulesTextBox = document.getElementById("password_reqs");
-    var maxLength = 0;
-
-    for (var i = 0; i < rulesEntries.length; i++) {
-        var entry = rulesEntries[i];
-
-        var rule = entry["rule"];
-        if (rule.length > maxLength) { maxLength = rule.length; }
-        var caption = entry["caption"];
-
-        var textNode = document.createTextNode(caption);
-        var option = document.createElement("option");
-        option.setAttribute("value", rule);
-        option.appendChild(textNode);
-        rulesDataList.appendChild(option);
-    }
-    rulesTextBox.size = maxLength;
+    let selects = document.querySelectorAll("select");
+    selects.forEach((select) => {
+        let opt = null; let txt = null;
+        for (let i = 0; i < SELECT_OPTIONS.length; i++) {
+            txt = document.createTextNode(SELECT_OPTIONS[i]);
+            opt = document.createElement("option");
+            opt.value = SELECT_OPTIONS[i];
+            opt.appendChild(txt);
+            select.appendChild(opt);
+        }
+    });
 });
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -93,14 +70,16 @@ window.addEventListener("load", function (evt) {
 var el = document.getElementById("password_gen");
 el.addEventListener("submit", function (evt) {
     evt.preventDefault();
-    var allowed = document.getElementById("available_chars").value;
-    var pattern = document.getElementById("password_reqs").value;
-    var passwordLength = document.getElementById("password_length").value;
+    // var allowed = document.getElementById("available_chars").value;
+    // var pattern = document.getElementById("password_reqs").value;
+    // var passwordLength = document.getElementById("password_length").value;
 
-    var password = get_random_matching_string(pattern, allowed, passwordLength);
+    // var password = get_random_matching_string(pattern, allowed, passwordLength);
 
-    var password_div = document.getElementById("password");
-    password_div.innerHTML = password;
+    // var password_div = document.getElementById("password");
+    // password_div.innerHTML = password;
+
+    
 
     return false;
 });
