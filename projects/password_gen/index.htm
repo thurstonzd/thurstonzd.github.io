@@ -18,22 +18,29 @@
         </p>
 
         <form id="password_gen">
-            <!-- list of available characters (to be populated by JavaScript) -->
-            <datalist id="available_chars_list"></datalist>
-
-            <!-- list of available password requirements (to be populated by JavaScript) -->
-            <datalist id="password_reqs_list"></datalist>
-
-            <!-- UI component for selecting available characters -->
             <label>
-                Available Characters:
-                <input type="text" list="available_chars_list" id="available_chars" required />
+                Upper-Case
+                <select id="upper_case" />
             </label>
 
-            <!-- UI component for selecting password requirement -->
             <label>
-                Password Requirement:
-                <input type="text" list="password_reqs_list" id="password_reqs" required />
+                Lower-Case
+                <select id="lower_case" />
+            </label>
+
+            <label>
+                Digits
+                <select id="digits" />
+            </label>
+
+            <label>
+                Special Characters
+                <select id="special_characters_rule" />
+            </label>    
+            
+            <label>
+                Special Characters Allowed
+                <input type="text" id="special_characters" />
             </label>
 
             <label>
