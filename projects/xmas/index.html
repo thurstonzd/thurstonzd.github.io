@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Christmas Greeter</title>
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/luxon@2.2.0/build/global/luxon.min.js">
+        </script>
+        <style>
+            
+        </style>
+    </head>
+    
+    <body>
+        <input type="date" id="dt" />
+
+        <input type="button" value="Calculate" />
+
+        <div id="xmas">
+
+        </div>
+
+        <script>
+            let txtDate = document.querySelector("#dt");
+            txtDate.value = new Date();
+
+            let DateTime = luxon.DateTime;
+            let Interval = luxon.Interval;
+
+            // let today = DateTime.now();
+            let today = DateTime.now();
+            let xmas = DateTime.fromObject({day: 25, month: 12});
+
+            if (today.startOf('day') > xmas) {
+                xmas = xmas.plus({years: 1});
+            }
+
+            let i = Interval.fromDateTimes(today, xmas);
+
+            if (i < 0) {xmas = xmas.plus({year: 1})}
+        </script>
+    </body>    
+</html>

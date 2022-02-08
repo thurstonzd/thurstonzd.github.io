@@ -22,8 +22,10 @@ var PASSWORD_RULES = [
             "(?=.*[A-Z]+.*)" +      // upper-case in string
             "(?=.*[a-z]+.*)" +      // lower-case in string
             "(?=.*[0-9].*)" +       // digit in string
-            "^[A-Za-z]{1}" +        // pw starts with letter
-            "[A-Za-z0-9]{7,}$"      // pw ends with 7+ alphanumeric chars
+            "^[A-Za-z]" +           // pw starts with letter
+            ".{7,}$"                // pw ends with 7+ chars 
+                                    // (additional character requirements
+                                    // satisfied in lookahead assertions)
     },
     {
         "caption": "Complex Password",
@@ -32,8 +34,8 @@ var PASSWORD_RULES = [
             "(?=.*[a-z]+.*)" +      // lower-case in string
             "(?=.*[0-9]+.*)" +      // digit in string
             "(?=.*[!#$@)]+.*)" +    // special character in string
-            "^[A-Za-z]{1}" +        // pw starts with letter
-            "[A-Za-z0-9!#$@]{7,}$"  // password ends with 7+ alphanumeric chars
+            "^[A-Za-z]" +           // pw starts with letter
+            ".{7,}$"                // password ends with 7+ chars
     }
 ];
 
