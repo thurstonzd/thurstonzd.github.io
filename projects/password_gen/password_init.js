@@ -27,7 +27,31 @@ let PROHIBITED = "prohibited";
 let SELECT_OPTIONS = [ALLOWED, REQUIRED, PROHIBITED];
 
 ///////////////////////////////////////////////////////////////////////////////////
-// initialize form
+// helper functions
+let get_lookahead = function(select) {
+    let chars = null, char_class = null;
+
+    if (select.id === SPECIAL_CHARACTERS_KEY) {
+        chars = document.getElementById("special_characters").value;
+        char_class = `[${chars}]`;
+    }
+    else if (select.id === DIGITS_KEY) {
+        char_class = '\\d'
+    }
+    else {
+        chars = CHARACTER_CLASSES[select.id];
+        // first and last element of character class string.
+        char_class = `[${chars[0]}-${chars.slice(-1)}]`;
+    }
+
+    let comparator = (select.value === REQUIRED) ? "=" : "!";
+    lookahead = `(?${comparator}.*${char_class}.*)`;
+
+    return lookahead;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// event listener for submitting form
 window.addEventListener("load", function (evt) {
     // populate SELECTs
     for (let k in CHARACTER_CLASSES) {
@@ -75,24 +99,7 @@ el.addEventListener("submit", function (evt) {
         // update lookahead assertions based on PROHIBIT/REQUIRE rules.
         if ([REQUIRED, PROHIBITED].includes(select.value))
         {
-            let chars = null, char_class = null;
-
-            if (select.id === SPECIAL_CHARACTERS_KEY) {
-                chars = document.getElementById("special_characters").value;
-                char_class = `[${chars}]`;
-            }
-            else if (select.id === DIGITS_KEY) {
-                char_class = '\\d'
-            }
-            else {
-                chars = CHARACTER_CLASSES[select.id];
-                // first and last element of character class string.
-                char_class = `[${chars[0]}-${chars.slice(-1)}]`;
-            }
-
-            let comparator = (select.value === REQUIRED) ? "=" : "!";
-            lookahead = `(?${comparator}.*${char_class}.*)`;
-            console.log(lookahead);
+            let lookahead = get_lookahead(select);
             patterns.push(lookahead);
         }
     });
