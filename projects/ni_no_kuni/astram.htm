@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <title>Astram Alphabet</title>
+    <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+
+    <p id="space">[Space]</p>
+    
+    <details>
+        <summary>Letters</summary>
+        <div id="letters"></div>
+    </details>
+
+    <details>
+        <summary>Numbers</summary>
+        <div id="numbers"></div>
+    </details>
+
+    <textarea id="text" cols="50" rows="2"></textarea>
+
+    <script>
+
+        document.getElementById("space").addEventListener(
+            "click", 
+            function() {
+                decodeLetter(" ");
+            }, 
+            false);
+
+        /* populate letters */
+        const start = "A".codePointAt();
+        const stop = "Z".codePointAt();
+        const arr = Array.from({length: stop - start + 1}, (_, a) => a + start);
+        const letter_div = document.getElementById("letters");
+        const txt = document.getElementById("text");
+
+        const decodeLetter = function(ltr) {
+            txt.value += ltr;
+        }
+
+        /* populate images */
+        for (let i = start; i <= stop; i++) {
+            let img = document.createElement("img");
+            let ltr = String.fromCodePoint(i);
+            img.src = `letters/${ltr}.png`;
+            img.alt = ltr;
+            img.addEventListener(
+                "click", 
+                function() {decodeLetter(ltr);},
+                false);
+
+            let img_container = document.createElement("figure");
+
+            img_container.id = ltr;
+            img_container.innerHTML = `<figcaption>${ltr}</figcaption>`
+            img_container.appendChild(img);
+            letter_div.appendChild(img_container);
+        }
+    </script>
+</body>
