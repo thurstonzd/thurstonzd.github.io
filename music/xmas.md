@@ -32,7 +32,6 @@ Capo on Fred 3, to play in Bb
 ### English
 
 ```tabs
-
 Verse 1
 G
 Silent night, holy night;
