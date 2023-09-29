@@ -238,3 +238,45 @@ Thee, the Life, the Inner Man:
 O! to All Thyself impart,
 Form'd in each Believing Heart. 
 ```
+
+## Deck the Halls
+
+```
+Verse 1
+D                  Bm
+Deck the hall with boughs of holly,
+A7             D       A7      D
+Fa, la, la, la, la, la, la, la, la!
+D                Bm
+''Tis the season to be jolly,
+A7          D       A7        D
+Fa, la, la, la, la, la, la, la, la!
+A7                D         A7
+Fill the meadcup, drain the barrel,
+D          Bm     A    E7   A
+Fa, la, la, la, la, la, la, la!
+D                 Bm
+Troul the ancient Christmas carol,
+G            D       A7     D
+Fa, la, la, la, la, la, la, la!
+
+Verse 2
+See the flowing bowl before us,
+Fa, la, la, la, la, la, la, la, la!
+Strike the harp and join the chorus.
+Fa, la, la, la, la, la, la, la, la!
+Follow me in merry measure,
+Fa, la, la, la, la, la, la, la!
+While I sing of beauty's treasure,
+Fa, la, la, la, la, la, la, la, la!
+
+Verse 3
+Fast away the old year passes,
+Fa, la, la, la, la, la, la, la, la!
+Hail the new, ye lads and lasses!
+Fa, la, la, la, la, la, la, la, la!
+Laughing, quaffing all together,
+Fa, la, la, la, la, la, la, la!
+Heedless of the wind and weather,
+Fa, la, la, la, la, la, la, la, la!
+```
