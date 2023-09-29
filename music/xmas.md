@@ -174,3 +174,67 @@ Each other now embrace;
 This holy tide of Christmas
 All other doth deface
 ```
+
+## Hark the Herald Angels Sing
+
+```
+Verse 1
+G            D   G         D
+HARK! the Herald Angels sing
+G  Bm C      G   D    G
+Glory to the new-born King!
+                D   Em G  A7
+Peace on Earth, and Mercy mild,
+Bm  A7  D        G A7   D
+God and Sinners reconcil'd.
+G  D7  G      D7 G      D
+Joyful all ye Nations rise,
+G    D7  G        D7 G      D
+Join the Triumphs of the Skies;
+C      E7       Am  E7  Am
+Nature rise and worship him,
+D7     G           D  G
+Who is born at Bethlehem.
+
+Verse 2
+Christ by highest Heav'n ador'd,
+Christ the everlasting Lord;
+Late in Time behold-him come,
+Offspring of the Virgin's Womb.
+Veil'd in Flesh the Godhead see,
+Hail th' incarnate Deity!
+Pleas'd as Man with Men t'appear,
+Jesus our Emmanuel here.
+
+Verse 3
+Hail the Heav'n-born Prince of Peace
+Hail the Son of Righteousness!
+Light and Life around he brings,
+Ris'n with Healing in his Wings.
+Mild he lays his Glory by,
+Born that Men no more may die;
+Born to raise the Sons of Earth,
+Born to give them second Birth.
+
+Verse 4
+Come, Desire of Nations, come,
+Fix in us thy heav'nly Home;
+Rise the Woman's conqu'ring Seed,
+Bruise in us the Serpent's Head.
+Now display thy saving Pow'r,
+Ruin'd Nature now restore,
+Now in Mystic Union join
+Thine to Ours, and Ours to Thine.
+
+Verse 5
+Adam's Likeness, LORD, efface,
+Stamp thy Image in its Place,
+Second Adam from above,
+Reinstate us in thy Love.
+
+Verse 6
+Let us Thee, tho' lost, regain,
+Thee, the Life, the Inner Man:
+O! to All Thyself impart,
+Form'd in each Believing Heart. 
+```
