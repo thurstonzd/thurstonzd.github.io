@@ -1,3 +1,6 @@
+* Do not remove this line (it will not be displayed)
+{:toc}
+
 ## Silent Night
 
 Capo on Fred 3, to play in Bb
