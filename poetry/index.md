@@ -1,6 +1,29 @@
-## This Be The Verse
+<style>
+/* Adding 'Contents' headline to the TOC */
+#markdown-toc::before {
+    content: "Contents";
+    font-weight: bold;
+}
 
-By Philip Larkin
+
+/* Using numbers instead of bullets for listing */
+#markdown-toc ul {
+    list-style: decimal;
+}
+
+#markdown-toc {
+    border: 1px solid #aaa;
+    padding: 1.5em;
+    list-style: decimal;
+    display: inline-block;
+}
+</style>
+
+* Do not remove this line (it will not be displayed)
+{::options toc_levels="2" /}
+{:toc}
+
+## This Be The Verse by Philip Larkin
 
 ```
 They fuck you up, your mum and dad.   
@@ -19,9 +42,9 @@ Get out as early as you can,
     And don’t have any kids yourself.
 ```
 
-## Home
+## Home by Warsan Shire
 
-By Warsan Shire. For more information, see https://www.facinghistory.org/resource-library/home-warsan-shire.
+For more information, see https://www.facinghistory.org/resource-library/home-warsan-shire.
 
 ```
 no one leaves home unless
