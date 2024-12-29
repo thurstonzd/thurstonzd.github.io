@@ -1,3 +1,9 @@
 name : Hank Quinlan, Horrible Cop
 markdown : kramdown
 permalink : /blog/:year/:month/:day/:title
+defaults :
+  - 
+    scope:
+      path: "" # all files in project
+    values:
+      layout: "default"

@@ -1,3 +1,6 @@
+---
+---
+
 # Books, Thrifting, Love and Death
 
 My wife and I love to go shopping at thrift stored. While she looks at clothes, I'll typically spend at least part of my time looking at books. We've gotten a lot of books that have very sweet and touching messages: As you can imagine, a lot of these books were birthday or Christmas presents originally. 
