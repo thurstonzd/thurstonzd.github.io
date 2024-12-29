@@ -2,8 +2,6 @@
 title: Christmas Carols
 ---
 
-<link rel="stylesheet" href="./music.css" />
-
 * Do not remove this line (it will not be displayed)
 {::options toc_levels="2" /}
 {:toc}

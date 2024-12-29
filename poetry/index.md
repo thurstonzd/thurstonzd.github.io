@@ -1,3 +1,6 @@
+---
+---
+
 <style>
 /* Adding 'Contents' headline to the TOC */
 #markdown-toc::before {
