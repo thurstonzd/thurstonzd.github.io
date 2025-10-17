@@ -1,29 +1,10 @@
-<style>
-/* Adding 'Contents' headline to the TOC */
-#markdown-toc::before {
-    content: "Contents";
-    font-weight: bold;
-}
-
-
-/* Using numbers instead of bullets for listing */
-#markdown-toc ul {
-    list-style: decimal;
-}
-
-#markdown-toc {
-    border: 1px solid #aaa;
-    padding: 1.5em;
-    list-style: decimal;
-    display: inline-block;
-}
-</style>
+---
+title: Kid Music
+---
 
 * Do not remove this line (it will not be displayed)
 {::options toc_levels="2" /}
 {:toc}
-
-# Kids Songs
 
 ## The Pirates Who Dont Do Anything
 
