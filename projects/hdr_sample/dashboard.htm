@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dashboard</title>  
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #in-progress caption {
+                background-color: red;
+                color: white;
+                font-weight: bold;
+            }
+
+            #approved caption {
+                background-color: grey;
+                color: white;
+            }
+
+
+            table {
+                border-collapse: collapse;
+                table-layout: fixed;
+            }
+
+            td, th {
+                border: solid black 1px;
+                padding: 0.5em;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <!--In Progress -->
+        <table id="in-progress">
+            <thead>
+                <caption>In-Progress</caption>
+                <tr>
+                    <th width="5%">Ref#</th>
+                    <th width="5%">FB#</th>
+                    <th width="5%">Customer</th>
+                    <th width="5%">Unit</th>
+                    <th width="5%">Claim #</th>
+                    <th width="5%">Approval</th>
+                    <th width="5%">Repair Details</th>
+                    <th width="5%">Notes</th>
+                    <th width="5%">Brand</th>
+                    <th width="5%">Arrived at Shop</th>
+                    <th width="5%">Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1234</td>
+                    <td></td>
+                    <td>Penske Cola</td>
+                    <td>Unit 1</td>
+                    <td></td>
+                    <td></td>
+                    <td>Bodywork Only</td>
+                    <td>Additional part arrived</td>
+                    <td></td>
+                    <td></td>
+                    <td>In-Progress</td>
+                </tr>
+
+                <tr>
+                    <td>5462</td>
+                    <td></td>
+                    <td>Worthy Trucking</td>
+                    <td>Unit 7</td>
+                    <td></td>
+                    <td>10/29/25</td>
+                    <td>Curtain box truck</td>
+                    <td>Parts arrived 11/3/25</td>
+                    <td>Morgan</td>
+                    <td>10/13/25</td>
+                    <td>In-Progress</td>
+                </tr>
+
+                <tr>
+                    <td>3542</td>
+                    <td>45656</td>
+                    <td>John's Trucking</td>
+                    <td>465645</td>
+                    <td>AFK989898</td>
+                    <td>9/19/25</td>
+                    <td>Box repairs</td>
+                    <td>Deposit paid</td>
+                    <td>Supreme</td>
+                    <td>11/3/25</td>
+                    <td>In-Progress</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Approved -->
+        <table id="approved">
+            <thead>
+                <caption>In-Progress</caption>
+                <tr>
+                    <th width="5%">Ref#</th>
+                    <th width="5%">FB#</th>
+                    <th width="5%">Customer</th>
+                    <th width="5%">Unit</th>
+                    <th width="5%">Claim #</th>
+                    <th width="5%">Approval</th>
+                    <th width="5%">Repair Details</th>
+                    <th width="5%">Notes</th>
+                    <th width="5%">Brand</th>
+                    <th width="5%">Arrived at Shop</th>
+                    <th width="5%">Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <!--Ref # --><td>4566</td>
+                    <!-- FB #--><td>4564</td>
+                    <!--Customer--><td>Simon & Schuster</td>
+                    <!--Unit--><td>456</td>
+                    <!--Claim #--><td>Insurance Claim</td>
+                    <!--Approval--><td>9/2/25</td>
+                    <!--Repair Details--><td>Box Repairs</td>
+                    <!--Notes--><td>Needs labor revised when unit arrives</td>
+                    <!--Brand--><td></td>
+                    <!--Arrived at shop--><td></td>
+                    <!--Status--><td>Waiting on Customer</td>
+                </tr>
+
+                 <tr>
+                    <!--Ref # --><td>3113</td>
+                    <!-- FB #--><td>2343</td>
+                    <!--Customer--><td>Everything and Moore</td>
+                    <!--Unit--><td>232</td>
+                    <!--Claim #--><td>Insurance Claim</td>
+                    <!--Approval--><td>9/2/25</td>
+                    <!--Repair Details--><td>Box Repairs</td>
+                    <!--Notes--><td>Needs labor revised when unit arrives</td>
+                    <!--Brand--><td></td>
+                    <!--Arrived at shop--><td></td>
+                    <!--Status--><td>Waiting on Customer</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </body>
+
+</html>

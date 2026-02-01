@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Repair Form</title>  
+        <style>
+            label {display: block;}
+        </style>
+    </head>
+
+    <body>
+        <form>
+            <label for="ref_no">Ref #</label>
+            <input id="ref_no" type="text">
+
+            <label for="fullbay_no">Fullbay #</label>
+            <input id="fullbay_no" type="text">
+
+            <label for="customer">Customer</label>
+            <input id="customer" type="text">
+
+            <label for="unit">Unit</label>
+            <input id="unit" type="text">
+
+            <label for="status">Status</label>
+            <select id="status">
+                <!-- <option></option> -->
+                <option>New Estimate Request</option>
+                <option>Needs Damage Assessment</option>
+                <option>Needs Estimate</option>
+                <option>Awaiting Approval</option>
+                <option>Needs Parts</option>
+                <option>Ready for Repair</option>
+                <option>Repair Complete; Invoice Sent</option>
+            </select>
+
+            <label for="claim_id">Claim #</label>
+            <input id="claim_id" type="text">
+
+            <label for="approval_date">Approval</label>
+            <input id="approval_date" type="date">
+
+            <label for="repair_details">Repair Details</label>
+            <input id="repair_details" type="text">
+
+             <label for="notes">Notes</label>
+            <textarea rows="5" cols="50"></textarea>
+
+            <label for="brand">Repair Details</label>
+            <input id="brand" type="text">
+
+            <label for="arrival_date">Arrived at Shop</label>
+            <input id="arrival_date" type="date">
+        
+            </form>
+    </body>
+</html>
