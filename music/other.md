@@ -3,13 +3,14 @@ title: Misc. Songs
 ---
 
 * Do not remove this line (it will not be displayed)
-{::options toc_levels="2" /}
+{::options toc_levels="1,2" /}
 {:toc}
 
 # Florence and the Machine
 
 ## Morning Elvis 
 
+```
 intro
 G D C G D C
 
@@ -117,3 +118,4 @@ To be spared
 To be spared
        C
 To be spared
+```
