@@ -366,13 +366,15 @@
             tr.cells[2].innerText = s;
         }
 
-        fantasia = document.querySelector("#fantasia")
-        fantasia2000 = document.querySelector("#fantasia2000")
+        const fantasia_ids = ['fantasia', 'fantasia2000'];
 
-        fantasia_date = new Date(fantasia.cells[1].innerText);
-        new_fantasia_date = new Date(fantasia2000.cells[1].innerText);
+        let old_fantasia_date, new_fantasia_date;
+        [old_fantasia_date, new_fantasia_date] = fantasia_ids
+            .map((id) => document.getElementById(id))
+            .map((tr) => new Date(tr.cells[1].innerText))
+        ;
 
-        if ((new_fantasia_date - fantasia_date) <= (today - new_fantasia_date)) {
+        if ((new_fantasia_date - old_fantasia_date) <= (today - new_fantasia_date)) {
             s = "Fantasia 2000 came out closer to the original Fantasia than to present day.";
         }
         else {
