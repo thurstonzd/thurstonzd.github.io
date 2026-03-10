@@ -1,8 +1,9 @@
 ---
 title: Misc. Songs
+include_scripts: [
+       "/assets/js/chord_transposer.js"
+]
 ---
-
-{% include chord_transposer.htm %}
 
 * Do not remove this line (it will not be displayed)
 {::options toc_levels="1,2" /}
