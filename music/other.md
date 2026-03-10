@@ -2,6 +2,8 @@
 title: Misc. Songs
 ---
 
+{% include chord_transposer.js %}
+
 * Do not remove this line (it will not be displayed)
 {::options toc_levels="1,2" /}
 {:toc}
@@ -448,3 +450,78 @@ What you do to me.
    Bm   D    Bm    D    Bm   D    Bm   D D (full strum)
 Ohhh
 ```
+
+# Snow Patrol
+
+## Chasing Cars
+
+<details>
+<summary>In G</summary>
+
+```
+G5           D/F#      Csus2         G5
+ We'll do it all, everything, on our own
+G5       D/F#    Csus2        G5
+We don't need anything, or anyone
+
+Chorus: (power chords)
+
+         G5                  D/F#
+If I lay here, if I just lay here,
+              C5                           G5
+would you lie with me, and just forget the world
+
+2nd Verse: (intro riff)
+
+G5       D/F#               Csus2      G5
+ I don't quite, know how to say, how I feel
+G5          D/F#              Csus2         G5
+Those three words, I said too much, but not enough
+
+Extended Chorus: (power chords)
+
+G5                       D/F#
+If I lay here, if I just lay here
+              C5                           G5
+would you lie with me, and just forget the world
+G5                                    D/F#
+Forget what we're told, before we get too old,
+          C5                               G5
+show me a garden that's bursting into life
+
+Bridge: (power chords)
+
+G5          D/F#          C5               G5
+Let's waste time, chasing cars, around our heads
+G5          D/F#             C5             G5 (hold)
+I need your grace, to remind me, to find my own
+
+Extended Chorus/Outro: (power chords)
+
+G5                       D/F#
+If I lay here, if I just lay here,
+
+              C5                           G5
+would you lie with me, and just forget the world
+G5                                    D/F#
+Forget what we're told, before we get too old
+          C5                               G5
+show me a garden that's bursting into life
+
+G5                      D/F#
+All that I am, all that I ever was 
+                C5                              G5
+is here in your perfect eyes, they're all I can see
+G5                                 D/F#
+I don't know where, confused about how as well
+                     C5                                 G5
+Just know that these things will never change for us at all
+
+(intro riff)
+
+G5                       D/F#
+If I lay here, if I just lay here,
+              Csus2                        G5
+would you lie with me, and just forget the world. 
+```
+</details>
