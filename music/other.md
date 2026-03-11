@@ -1,7 +1,7 @@
 ---
 title: Misc. Songs
 include_scripts: [
-       "/assets/js/chord_transposer.js"
+       "/assets/js/chord-transposer/Main.js"
 ]
 ---
 
