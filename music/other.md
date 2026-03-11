@@ -1,8 +1,6 @@
 ---
 title: Misc. Songs
-include_scripts: [
-       "/assets/js/chord-transposer/Main.js"
-]
+layout: music
 ---
 
 * Do not remove this line (it will not be displayed)
