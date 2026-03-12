@@ -6,4 +6,51 @@ layout : default
     {{ content }}
 </div>
 
-<script type="module" src="/assets/js/chord-transposer/Main.js"
+<script type="module">
+
+    import {transpose} from "/assets/js/chord-transposer/Main.js"
+
+    const event_types = ['keyup', 'input', 'change'];
+    
+    const input_attributes = {
+        'type': 'number',
+        'step': '1',
+        'value': '0',
+    }
+
+    function event_handle_generator(song) {
+
+        const original_song = song.innerText;
+
+        function handle_event(e) {
+            song.innerText = transpose(original_song, e.target.value);
+        }
+        return handle_event
+    }
+
+    function get_input(song) {
+
+        let input = document.createElement("input")
+
+        for (const attr in input_attributes) {
+            input.setAttribute(attr, input_attributes[attr])
+        }
+
+        event_types.forEach((evnt) => input.addEventListener(evnt, event_handle_generator(song)))
+
+        return input;
+
+    }
+
+    const songs = document.querySelectorAll("pre");
+
+    for (const song of songs) {
+        let input = get_input(song);
+        let label = document.createElement("label");
+        [document.createTextNode("Tranpose: "), input].forEach((el) => {
+            label.appendChild(el);
+        })
+        song.insertAdjacentElement('beforebegin', label);
+    }
+
+</script>
