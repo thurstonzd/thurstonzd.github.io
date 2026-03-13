@@ -1,5 +1,6 @@
 ---
 title: Christmas Carols
+layout: music
 ---
 
 * Do not remove this line (it will not be displayed)

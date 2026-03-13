@@ -1,5 +1,6 @@
 ---
 title: Kid Music
+layout: music
 ---
 
 * Do not remove this line (it will not be displayed)
