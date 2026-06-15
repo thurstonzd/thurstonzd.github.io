@@ -7,3 +7,7 @@ defaults :
       path: "" # all files in project
     values:
       layout: "default"
+
+collections:
+  recipes:
+    output: true
