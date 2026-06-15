@@ -10,17 +10,17 @@ name: Chicken Soup
    <details>
    <summary>Note</summary>
 
-   It should be Swanson, since that brand provides the best flavor based on our experience.
+   > It should be Swanson, since that brand provides the best flavor based on our experience.
    </details>
 
  - 2 cups water
- - 2 tbsp garlic (you can use the "jarlic")
+ - 2 tbsp garlic (you can use "jarlic")
  - 1 large onion, diced (or 2 small onions)
  - 1/2 bag of carrots
  - poultry seasoning
  - Celery (small bag)
  - Salt and pepper to taste
- - 1 1/2 cups noddles
+ - 1 1/2 cups noodles
 
 ## Directions
 
