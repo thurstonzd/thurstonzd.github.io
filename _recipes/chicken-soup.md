@@ -11,6 +11,7 @@ name: Chicken Soup
    <summary>Note</summary>
 
    > It should be Swanson, since that brand provides the best flavor based on our experience.
+   
    </details>
 
  - 2 cups water
