@@ -4,7 +4,7 @@ name: Chicken Soup
 
 ## Ingredients
 
- - 3 chicken thighs
+ - <span class='quantity'>3</span> chicken thighs
  - 32 fluid ounces of Swanson chicken stock
 
    <details>
