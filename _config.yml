@@ -1,5 +1,5 @@
-name : Hank Quinlan, Horrible Cop
-markdown : kramdown
+name : Zack's Blog
+markdown: CommonMark
 permalink : /blog/:year/:month/:day/:title
 defaults :
   - 
@@ -11,3 +11,7 @@ defaults :
 collections:
   recipes:
     output: true
+
+commonmark:
+  options: ["FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table"]
