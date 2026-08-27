@@ -1,5 +1,7 @@
 ---
 name: Chicken Soup
+servings: Around 7
+time: 2 hours
 ---
 
 ## Ingredients

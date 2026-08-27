@@ -2,12 +2,26 @@
 layout: default
 ---
 
-<ul>
-{% for recipe in site.recipes %}
-    <li>
-        <a href="{{ recipe.url }}">
-            {{ recipe.name }}
-        </a>
-    </li>
-{% endfor %}
-</ul>
+<table>
+    <thead>
+        <th>Recipe</th>
+        <th>Servings</th>
+        <th>Time to Prepare</th>
+    </thead>
+
+    <tbody>
+    {% for recipe in site.recipes %}
+    <tr>
+        <td>
+            <a href="{{ recipe.url }}">
+                {{ recipe.name }}
+            </a>
+        </td>
+
+        <td class="centered">{{recipe.servings}}</td>
+        <td class="centered">{{recipe.time}}</td>
+    </tr>
+        
+    {% endfor %}
+    </tbody>
+</table>
