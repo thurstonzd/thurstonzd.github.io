@@ -5,9 +5,11 @@ layout: default
 
 ## Chords and Tabs
 
- - [Christmas](xmas)
- - [Kids Music](kids)
- - [Other](other)
+{% for page in site.music %}
+
+ - [{{ page.title }}]({{ page.url }})
+
+{% endfor %}
 
 ## Other Sites
 

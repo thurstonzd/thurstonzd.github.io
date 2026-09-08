@@ -9,8 +9,8 @@ defaults :
       layout: "default"
 
 collections:
-  recipes:
-    output: true
+  recipes: {output: true}
+  music: {output: true}
 
 commonmark:
   options: ["FOOTNOTES"]
