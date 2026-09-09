@@ -3,9 +3,14 @@ title: Christmas Carols
 layout: music
 ---
 
+<details>
+<summary>Table of Contents</summary>
+
 * Do not remove this line (it will not be displayed)
 {::options toc_levels="2" /}
 {:toc}
+
+</details>
 
 ## Angels We Have Heard on High
 
